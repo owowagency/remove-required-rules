@@ -17,9 +17,9 @@ composer require owowagency/remove-required-rules
 ## Usage
 
 ```php
-$rules = (new StoreRequest())->rules();
+$rules = (new StoreRequest())->rules(); // Input: 'required|string' or ['required', 'string']
 
-$rules = remove_required($rules);
+$rules = remove_required($rules); // Output: 'string' or ['string']
 ```
 
 ### Testing
