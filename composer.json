@@ -37,15 +37,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Owowagency\\RemoveRequiredRules\\RemoveRequiredRulesServiceProvider"
-            ],
-            "aliases": {
-                "RemoveRequiredRules": "Owowagency\\RemoveRequiredRules\\RemoveRequiredRulesFacade"
-            }
-        }
     }
 }
