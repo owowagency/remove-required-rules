@@ -17,9 +17,32 @@ composer require owowagency/remove-required-rules
 ## Usage
 
 ```php
-$rules = (new StoreRequest())->rules(); // Input: 'required|string' or ['required', 'string']
+$rules = remove_required($rules);
+```
 
-$rules = remove_required($rules); // Output: 'string' or ['string']
+**What this would look like in a form request**
+
+```php
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class UpdateRequest extends FormRequest
+{
+    /**
+     * Get the validation rules that apply to the request.
+     */
+    public function rules(): array
+    {
+        // Input: 'required|string' or ['required', 'string']
+        $rules = (new StoreRequest())->rules();
+
+        // Output: 'string' or ['string']
+        return remove_required($rules);
+    }
+}
 ```
 
 ### Testing
