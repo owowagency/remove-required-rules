@@ -1,0 +1,51 @@
+{
+    "name": "owowagency/remove-required-rules",
+    "description": "Small helper function which lets you remove the required rule from your validation rules",
+    "keywords": [
+        "owowagency",
+        "remove-required-rules"
+    ],
+    "homepage": "https://github.com/owowagency/remove-required-rules",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dees Oomens",
+            "email": "dees@owow.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Owowagency\\RemoveRequiredRules\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Owowagency\\RemoveRequiredRules\\RemoveRequiredRulesServiceProvider"
+            ],
+            "aliases": {
+                "RemoveRequiredRules": "Owowagency\\RemoveRequiredRules\\RemoveRequiredRulesFacade"
+            }
+        }
+    }
+}
